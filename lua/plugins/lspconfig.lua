@@ -31,7 +31,7 @@ local plugins = {
 				luau_lsp = function()
 					require("luau-lsp").setup({
 						server = {
-							filetypes = { "luau", "lua" },
+							filetypes = {"luau"},
 							settings = {
 								["luau-lsp"] = {
 									capabilities = capabilities,
