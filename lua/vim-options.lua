@@ -36,5 +36,9 @@ vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 vim.keymap.set("n", "<A-v>", "<C-w>v<C-w>l:terminal<CR>", opts)
 
+vim.keymap.set("n", "<Home>", ":wa<CR>:qa<CR>", opts)
+vim.keymap.set("n", "<End>", ":qa!<CR>")
+
+
 -- terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
