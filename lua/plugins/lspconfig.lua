@@ -8,6 +8,21 @@ local plugins = {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
+				cmd = { "clangd" },
+				filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+				single_file_support = true,
+			})
+			require("lspconfig").rust_analyzer.setup({
+				settings = {
+					["rust-analyzer"] = {
+						diagnostics = {
+							enable = true,
+						},
+					},
+				},
+			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
@@ -31,7 +46,7 @@ local plugins = {
 				luau_lsp = function()
 					require("luau-lsp").setup({
 						server = {
-							filetypes = {"luau"},
+							filetypes = { "luau" },
 							settings = {
 								["luau-lsp"] = {
 									capabilities = capabilities,
@@ -50,6 +65,8 @@ local plugins = {
 				ensure_installed = {
 					"lua_ls",
 					"luau_lsp",
+					"clangd",
+          "rust_analyzer"
 				},
 			})
 		end,
