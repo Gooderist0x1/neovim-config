@@ -9,7 +9,7 @@ local luau = {
 		config = function()
 			require("luau-lsp").setup({
 				sourcemap = {
-					enable = true,
+					enabled = true,
 					autogenerate = true,
 					rojo_project_file = "default.project.json",
 				},
