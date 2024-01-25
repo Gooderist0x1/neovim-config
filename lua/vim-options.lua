@@ -42,3 +42,9 @@ vim.keymap.set("n", "<End>", ":qa!<CR>")
 
 -- terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
+
+-- enable python provider
+
+vim.g.python3_host_prog = '/usr/bin/python3'
+--vim.g.loaded_python3_provider = nil
+

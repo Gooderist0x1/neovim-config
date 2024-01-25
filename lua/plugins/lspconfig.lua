@@ -30,6 +30,10 @@ local plugins = {
 	},
 	{
 		"williamboman/mason.nvim",
+    ensure_installed = {
+      "clang-format",
+      "stylua"
+    },
 		config = function()
 			require("mason").setup()
 		end,
