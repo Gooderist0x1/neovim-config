@@ -7,7 +7,7 @@ vim.cmd("set number")
 
 vim.wo.relativenumber = false
 
-local opts= { noremap = true, silent = true }
+local opts = { noremap = true, silent = true }
 
 -- Vim keymaps
 --
@@ -24,11 +24,13 @@ local opts= { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 -- normal
--- window opts  
+-- window opts
 vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
 vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
 vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
 vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
+vim.keymap.set("n", "<leader>s", "<C-w>s", opts)
+vim.keymap.set("n", "<leader>v", "<C-w>v", opts)
 
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", opts)
 vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -40,6 +42,7 @@ vim.keymap.set("n", "<Home>", ":wa<CR>:qa<CR>", opts)
 vim.keymap.set("n", "<End>", ":qa!<CR>")
 
 
+
 -- terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
 
@@ -47,4 +50,3 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
 
 vim.g.python3_host_prog = '/usr/bin/python3'
 --vim.g.loaded_python3_provider = nil
-

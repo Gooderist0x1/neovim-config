@@ -1,4 +1,4 @@
-local luautree = {
+--[[local luautree = {
   "zilibobi/luau-tree.nvim",
   config = function()
     local config = require("luau-tree.config")
@@ -14,4 +14,6 @@ local luautree = {
     hook:unhook()
   end,
 }
-return luautree
+return luautree]]
+
+return {}
