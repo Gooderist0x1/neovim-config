@@ -25,6 +25,7 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 -- normal
+vim.keymap.set("n", "<F2>", ":set relativenumber!<CR>", opts)
 -- window opts
 vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
 vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
